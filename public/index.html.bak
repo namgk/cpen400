@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="http://ece.ubc.ca/~kbajaj/cpen400a/jquery.js" type="text/javascript"></script>
+    <script src="js/cartupdates.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+    <a href="#showModal"><button id="cartbutton" class="cartbutton">Cart ($0)</button></a>
+    <div id="header">
+        <div id="logo">
+            <image class="logoimg" src="images/logo.png" />
+        </div>
+        <div id="welcomeBanner">
+            Welcome to the Bookstore
+        </div>
+    </div>
+    <div id="showModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>CART</h2>
+            <table style="width:100%">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th> 
+                <th>Add</th> 
+                <th>Remove</th> 
+              </tr>
+          </thead>
+          <tbody id="tablebody">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total">TOTAL</td> 
+                <td id="totalval">$0</td>
+            </tr>
+            </tbody>
+        </table>
+        <button>CHECKOUT</button>
+    </div>
+</div>
+<div id="mainContent">
+    <div id="navigationMenu">
+        <ul>
+            <li>All Items</li>
+            <li>Books</li>
+            <li>Clothing</li>
+            <li>Tech</li>
+            <li>Gifts</li>
+            <li>Stationary</li>
+            <li>Supplies</li>
+            <li id="showcart">Show Cart</li>
+        </ul>
+    </div>
+    <div id="productList">
+        <ul>
+            <li>
+                <image class="product" src="images/Box1_$10.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $10
+                </div>
+                <div class="name">Box1</div>
+            </li>
+            <li>
+                <image class="product" src="images/Box2_$5.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $5
+                </div>
+                <div class="name">Box2</div>
+            </li>
+            <li>
+                <image class="product" src="images/Clothes1_$20.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $20
+                </div>
+                <div class="name">Clothes1</div>
+            </li>
+            <li>
+                <image class="product" src="images/Clothes2_$30.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $30
+                </div>
+                <div class="name">Clothes2</div>
+            </li>
+            <li>
+                <image class="product" src="images/Jeans_$50.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $50
+                </div>
+                <div class="name">Jeans</div>
+            </li>
+            <li>
+                <image class="product" src="images/Keyboard_$20.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $20
+                </div>
+                <div class="name">Keyboard</div>
+            </li>
+            <li>
+                <image class="product" src="images/KeyboardCombo_$40.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $40
+                </div>
+                <div class="name">KeyboardCombo</div>
+            </li>
+            <li>
+                <image class="product" src="images/Mice_$20.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $20
+                </div>
+                <div class="name">Mice</div>
+            </li>
+            <li>
+                <image class="product" src="images/PC1_$350.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $350
+                </div>
+                <div class="name">PC1</div>
+            </li>
+            <li>
+                <image class="product" src="images/PC2_$400.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $400
+                </div>
+                <div class="name">PC2_</div>
+            </li>
+            <li>
+                <image class="product" src="images/PC3_$300.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $300
+                </div>
+                <div class="name">PC3</div>
+            </li>
+            <li>
+                <image class="product" src="images/Tent_$100.png" />
+                <image class="product cart addtocart" src="images/cart.png"/>
+                <div class="buttons">
+                    <button class="add">Add</button>
+                    <button class="remove hideaddbutton">Remove</button>
+                </div>
+                <div class="price">
+                    $100
+                </div>
+                <div class="name">Tent</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="footer">
+    Copyright &copy; 2015
+</div>
+
+
+</body>
+</html>

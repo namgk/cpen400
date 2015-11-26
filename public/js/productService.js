@@ -9,7 +9,7 @@ function fetchProducts(callback){
     var ajax = new XMLHttpRequest();
     ajax.timeout = TIMEOUT;
 
-    ajax.open("GET", "/products");
+    ajax.open("GET", "/products?token=Xoe2inasd");
 
     ajax.onload = function(){
       if (ajax.status != 200) {
